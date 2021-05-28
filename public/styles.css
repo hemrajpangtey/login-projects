@@ -1,0 +1,329 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background: url("abstract-nature-3840x2160-8k-21456.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.main__container {
+  max-width: 100%;
+  height: 100vh;
+  padding: 2vh 0;
+  position: relative;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.719);
+  min-height: 96vh;
+  position: relative;
+}
+
+.form-margin {
+  margin: 10px 0;
+}
+
+.form-border {
+  outline: none;
+  border: none;
+}
+
+.heading-center {
+  text-align: center;
+}
+.information{
+  position: absolute;
+  top: 0;
+  left: 20%;
+  color: red;
+}
+/* -------------------------Login--------------------------- */
+
+.container__login {
+  width: 300px;
+  min-height: 400px;
+  max-width: 500px;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid rgb(5, 201, 70);
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 3px 5px 10px 1px rgba(255, 255, 255, 0.541);
+}
+
+.container__login__formLayout {
+  margin: auto;
+  max-width: 500px;
+  max-height: 400px;
+  color: #fff;
+}
+
+.container__login__formLayout form {
+  margin: auto;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.container__login__formLayout__form__registration {
+  margin-top: 50px;
+}
+
+.login-register-btn {
+  background: none;
+  margin-left: 20px;
+  cursor: pointer;
+  color: rgb(5, 201, 70);
+}
+
+.login-input {
+  width: 100%;
+  padding: 12px;
+  outline: none;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 10px;
+  cursor: pointer;
+  background: rgb(5, 201, 70);
+  color: #fff;
+}
+
+/* -----------------------------register--------------------------- */
+
+.container__register {
+  width: 500px;
+  max-width: 300px;
+  min-height: 600px;
+  display: flex;
+  margin: auto;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid rgb(5, 201, 70);
+  box-shadow: 3px 5px 10px 1px rgba(255, 255, 255, 0.541);
+}
+.container__register__formLayout {
+  width: 100%;
+  margin: auto;
+  padding: 10px;
+}
+.container__register form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: auto;
+  color: #fff;
+}
+
+.register-input {
+  width: 100%;
+  padding: 5px;
+  outline: none;
+}
+
+textarea {
+  resize: none;
+}
+
+.register-form-btn {
+  padding: 10px;
+  background: rgb(5, 201, 70);
+  color: #fff;
+  cursor: pointer;
+}
+
+/* -------------------------SucessPage----------------------- */
+
+.container__Sucess {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+
+.container__Sucess__layout {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+}
+
+.container__Sucess__layout h1 {
+  font-size: 1rem;
+}
+
+.container__Sucess button {
+  width: 100%;
+  padding: 10px;
+  background: rgb(5, 201, 70);
+  color: #fff;
+  cursor: pointer;
+}
+
+
+/* ----------------dashborad--------------- */
+.container__dashBoard {
+  max-width: 900px;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.979);
+  min-height: 96vh;
+  position: relative;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+.dashBoard-padding {
+  padding: 50px 5px 0 5px;
+}
+.dashBoard-padding-table {
+  padding: 0 5px;
+}
+
+.dashBoard-grid{
+  display: grid;
+}
+.container__dashBoard__layout {
+  grid-template-columns: repeat(6, minmax(100px, 1fr));
+}
+.dashBoard-border {
+  text-align: center;
+  border: 1px solid #000;
+  word-wrap: break-word;
+}
+.container__dashBoard__layout div h2 {
+  font-size: 1.2rem;
+}
+.container__dashboard__btn {
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  left: 2%;
+}
+.layout {
+  width: 100%;
+  height: 100%;
+}
+
+.container__dashBoard__media__layout {
+  display: none;
+}
+
+/* ---------------------------edit--------------------- */
+.container__edit{
+  position: relative;
+}
+
+.container__edit__layout{
+  position: absolute;
+  width: 400px;
+  height: 200px;
+  background-color: rgba(0, 0, 0, 0.596);
+  top: 0%;
+  left: -180%;
+}
+.container__edit__layout__div{
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  color: #fff;
+}
+
+container__edit__layout__div input{
+  outline: none;
+}
+.container__edit__btn{
+  position: absolute;
+  top: 82%;
+  right: 0;
+  padding: 10px;
+  background: rgb(5, 201, 70);
+  color: #fff;
+  cursor: pointer;
+}
+.container__edit__layout__div label{
+  padding: 5px;
+}
+
+/* -----------------media-query------- */
+
+@media only screen and (max-width: 250px) {
+  .container {
+    max-width: 100%;
+  }
+}
+
+
+@media only screen and (max-width: 450px){
+  .container__edit__layout{
+    width: 200px;
+    height: 300px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  body {
+    height: 100vh;
+  }
+  .container {
+    height: 100vh;
+  }
+  .main__container {
+    padding:0;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .layout-disable {
+    display: none;
+  }
+  .container__dashBoard__layout {
+    flex-basis: 50%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
+  .dashBoard-border{
+    height: 40px;
+  }
+  .container__dashBoard__media__layout{
+    display: grid;
+  }
+  
+  .dashBoard-padding-table{
+    padding: 0;
+  }
+
+  .layout{
+    padding-top: 50px;
+  }
+  .layout-fluid {
+   display: flex;
+   width: 100%;
+   padding: 5px;
+   margin-bottom: 10px;
+  }
+
+  .container__edit__layout{
+    left: -90%;
+  }
+}
+
+@media only screen and (max-height:600px){
+  body {
+    height: 110vh;
+  }
+  .container {
+    height: 110vh;
+  }
+} 
