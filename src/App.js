@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Login from "./component/login";
+import Registration from "./component/registration"
+import DashBoard from "./component/dashboard"
 
-function App() {
+const App = () => {
+ 
+  const [condition, setCondition] = useState(true);
+  const[dashBoard,getDashBoard] = useState(false)
+
+  const[user, getUser ] = useState("");
+  const[loginUser,setLoginUser] = useState({
+    userName:"",
+    password:""
+  });
+  const[items, setItems] = useState([
+    {userName:"admin",password:"admin",id:45}
+  ]);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="main__container" >
+       {dashBoard?<DashBoard items={items} getDashBoard={getDashBoard}   setItems={  setItems} />:""}
+      <div className="container" style={{display:dashBoard?"none":"flex"}}>
+      {condition?<Login getDashBoard={getDashBoard} items={items} setLoginUser={setLoginUser} loginUser={loginUser} setCondition={setCondition}  />:<Registration setCondition={setCondition} setLoginUse={setLoginUser} user={user} items={items} getUser={getUser} setItems={setItems}  />}
+      </div>
     </div>
   );
-}
+};
 
 export default App;
